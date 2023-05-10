@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Películas</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Películas</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Género</th>
+          <th>Director</th>
+          <th>Clasificación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% peliculas.forEach(function(pelicula) { %>
+          <tr>
+            <td><%= pelicula.name %></td>
+            <td><%= pelicula.genero %></td>
+            <td><%= pelicula.director %></td>
+            <td><%= pelicula.calificacion %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <form method="POST" action="/index">
+      <button type="submit" class="btn btn-primary">Regresar</button>
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
